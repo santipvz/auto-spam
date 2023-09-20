@@ -8,11 +8,9 @@ as-is
 
 
 # Spam examples
-Default spam message (5 times)
-python `spam_bot.py` --mesage 'Sample Text'
 
-Spam a message 10 times
->python spam_bot.py --message 'Sample Text' --reps 10
+Default spam message (5 times) `python spam_bot.py --mesage 'Sample Text'`
 
-Using a number to spam
->python spam_bot.py --message 100
+Spam a message 10 times `python spam_bot.py --message 'Sample Text' --reps 10`
+
+Using a number to spam `python spam_bot.py --message 100`
