@@ -9,7 +9,7 @@ as-is
 
 # Spam examples
 Default spam message (5 times)
->python spam_bot.py --mesage 'Sample Text'
+> python spam_bot.py --mesage 'Sample Text'
 
 Spam a message 10 times
 >python spam_bot.py --message 'Sample Text' --reps 10
