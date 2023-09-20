@@ -3,9 +3,10 @@ import time
 import argparse
 
 def send_message(message, repetitions):
-    time.sleep(5)
+    time.sleep(5) # Time in seconds you have until it starts typing. Change it if you want other cooldown
 
-    if message.isnumeric():
+    # Checking if the message is a number not
+    if message.isnumeric(): 
         for i in range(1, int(message) + 1):
             pyautogui.typewrite(str(i))
             pyautogui.press('enter')
@@ -24,6 +25,7 @@ def main():
         from 1 to the specified number. If the message is not numeric, it will be sent
         as-is.
         ''')
+    # Setting help messages
     parser.add_argument('--message', required=True, help='The message you want to send (between ' ')')
     parser.add_argument('--reps', type=int, default=5, help='Number of times the message will be sent (default: 5)')
 
@@ -32,9 +34,11 @@ def main():
     message = args.message
     repetitions = args.reps
 
+    # Checking if number of repetitions is greater than zero
     if repetitions <= 0:
         print('The number of repetitions must be greater than zero.')
     else:
+        # Sending the message if everything went allright
         send_message(message, repetitions)
 
 if __name__ == '__main__':
