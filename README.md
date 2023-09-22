@@ -24,7 +24,9 @@ If it doesn't work you can try these other options:
 After installing the library, you can finally use this script.
 All you need to do is open your console on the same directory where you saved the _`spam_bot.py`_ and use the commands you can see below on Spam examples.
 
-![Example command on _Visual Studio Code_ console on Windows](https://github.com/santipvz/auto-spam/assets/114695520/7fbc8db2-8bba-4448-a1f4-a2d820dc733a)
+![Example command on _Visual Studio Code_ console on Windows](https://github.com/santipvz/auto-spam/assets/114695520/7fbc8db2-8bba-4448-a1f4-a2d820dc733a "Example command on Visual Studio Code console on Windows")
+
+Once you executed the command on the console, you need to place and click your mouse on the area where you want to send the messages, for example a WhatsApp chat.
 
 ## Spam examples
 
