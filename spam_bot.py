@@ -17,14 +17,7 @@ def send_message(message, repetitions):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Spam a message using pyautogui',
-        epilog= '''
-        This script allows you to send a message multiple times using pyautogui. 
-        You can specify the message you want to send and the number of times it
-        will be sent. If the message is a number, it will send a sequence of numbers
-        from 1 to the specified number. If the message is not numeric, it will be sent
-        as-is.
-        ''')
+        description='Spam a message using pyautogui')
     # Setting help messages
     parser.add_argument('--message', required=True, help='The message you want to send (between ' ')')
     parser.add_argument('--reps', type=int, default=5, help='Number of times the message will be sent (default: 5)')
