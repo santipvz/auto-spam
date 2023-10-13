@@ -19,7 +19,7 @@ def send_message(message, repetitions):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Spam a message using pyautogui')
+        description='Spam a message using pynput')
     # Setting help messages
     parser.add_argument('--message', required=True, help='The message you want to send (between ' ')')
     parser.add_argument('--reps', type=int, default=5, help='Number of times the message will be sent (default: 5)')
