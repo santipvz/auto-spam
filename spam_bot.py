@@ -1,6 +1,8 @@
-import pyautogui
+from pynput.keyboard import Key, Controller
 import time
 import argparse
+
+keyboard = Controller()
 
 def send_message(message, repetitions):
     time.sleep(5) # Time in seconds you have until it starts typing. Change it if you want other cooldown
@@ -8,12 +10,12 @@ def send_message(message, repetitions):
     # Checking if the message is a number not
     if message.isnumeric(): 
         for i in range(1, int(message) + 1):
-            pyautogui.typewrite(str(i))
-            pyautogui.press('enter')
+            keyboard.type(str(i))
+            keyboard.press(Key.enter)
     else:
         for _ in range(repetitions):
-            pyautogui.typewrite(message)
-            pyautogui.press('enter')
+            keyboard.type(message)
+            keyboard.press(Key.enter)
 
 def main():
     parser = argparse.ArgumentParser(
