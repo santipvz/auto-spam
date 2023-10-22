@@ -1,14 +1,28 @@
-from pynput.keyboard import Key, Controller
+"""
+Spam Bot
+"""
+
 import time
 import argparse
+from pynput.keyboard import Key, Controller
 
 keyboard = Controller()
 
-def send_message(message, repetitions):
-    time.sleep(5) # Time in seconds you have until it starts typing. Change it if you want other cooldown
+def send_message(message, repetitions) -> None:
+    """
+    Sends a specified message a given number of times with a delay in between.
 
-    # Checking if the message is a number not
-    if message.isnumeric(): 
+    Args:
+        message (str): The message you want to send.
+        repetitions (int): Number of times the message will be sent.
+
+    Returns:
+        None
+    """
+    time.sleep(5) # Time cooldown, change if you want to
+
+    # Checking if the message is a number or not
+    if message.isnumeric():
         for i in range(1, int(message) + 1):
             keyboard.type(str(i))
             keyboard.press(Key.enter)
@@ -17,23 +31,38 @@ def send_message(message, repetitions):
             keyboard.type(message)
             keyboard.press(Key.enter)
 
-def main():
+def main() -> None:
+    """
+    Main function to parse command line arguments and initiate the message sending.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     parser = argparse.ArgumentParser(
         description='Spam a message using pynput')
     # Setting help messages
-    parser.add_argument('--message', required=True, help='The message you want to send (between ' ')')
-    parser.add_argument('--reps', type=int, default=5, help='Number of times the message will be sent (default: 5)')
+    parser.add_argument('--message',
+                        required=True,
+                        help='The message you want to send (between single quotes)')
+
+    parser.add_argument('--reps',
+                        type=int,
+                        default=5,
+                        help='Number of times the message will be sent (default: 5)')
 
     args = parser.parse_args()
 
     message = args.message
     repetitions = args.reps
 
-    # Checking if number of repetitions is greater than zero
+    # Checking if the number of repetitions is greater than zero
     if repetitions <= 0:
         print('The number of repetitions must be greater than zero.')
     else:
-        # Sending the message if everything went allright
+        # Sending the message if everything went alright
         send_message(message, repetitions)
 
 if __name__ == '__main__':
