@@ -6,6 +6,11 @@ will be sent. If the message is a number, it will send a sequence of numbers
 from 1 to the specified number. If the message is not numeric, it will be sent
 as-is (if repetitions not specified, default repetitions are 5).
 
+<p align="center">
+   <img src="https://github.com/santipvz/auto-spam/actions/workflows/pylint.yml/badge.svg/" alt="Tests">
+   <img src="https://img.shields.io/badge/Version-2.0-blue/" alt="Static Badge">
+</p>
+
 ## Usage
 For this script, we are using the library `pynput` so we need to install it first through our _OS_ console.
 
