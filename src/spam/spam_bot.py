@@ -19,7 +19,7 @@ def send_message(message, repetitions) -> None:
     Returns:
         None
     """
-    time.sleep(5) # Time cooldown, change if you want to
+    time.sleep(2) # Time cooldown, change if you want to
 
     # Checking if the message is a number or not
     if message.isnumeric():
@@ -44,11 +44,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description='Spam a message using pynput')
     # Setting help messages
-    parser.add_argument('--message',
+    parser.add_argument('--message', '-m',
                         required=True,
                         help='The message you want to send (between single quotes)')
 
-    parser.add_argument('--reps',
+    parser.add_argument('--reps', '-r',
                         type=int,
                         default=5,
                         help='Number of times the message will be sent (default: 5)')
